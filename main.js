@@ -1,9 +1,9 @@
 'use strict'
 
-const IMAGES = [
-//house
-'https://i.imgur.com/14luBmT.png'
-]
+const IMAGES = {
+	house: 'https://i.imgur.com/14luBmT.png'
+};
+
 
 const GRID_ROWS = 10;
 const GRID_COLS= 10;
@@ -40,6 +40,9 @@ class House extends Item{
     this.quantity = 3;
     STATE.resources.HomelessPopulation -= 3;
     STATE.resources.HomelessPopulation = Math.max(0, STATE.resources.HomelessPopulation)
+  }
+  get image() {
+
   }
 }
 
