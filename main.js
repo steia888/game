@@ -42,13 +42,13 @@ class House extends Item{
     STATE.resources.HomelessPopulation = Math.max(0, STATE.resources.HomelessPopulation)
   }
   get image() {
-
+  	return 'house'
   }
 }
 
 function init() {
 	var house = new House();
-	GAME.grid.place(House, 0, 0);
+	GAME.grid.place(house, 0, 0);
 
 	var menu = new Menu('Shop', [
 		new Button('Buy House', House),
