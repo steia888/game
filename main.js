@@ -63,8 +63,8 @@ function init() {
 
 
 
-	var menu = new Menu('Shop', [
-		new Button('Buy House', House)
+	let menu = new Menu('Shop', [
+		new BuyButton('Buy House', House)
 		//new Button('Buy Cure', Cure)
 		]);
 		defineHarvester('Money', function() {

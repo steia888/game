@@ -9,6 +9,7 @@ const GRID_ROWS = 7;
 const GRID_COLS= 7;
 const GRID_CELL_SIZE = 100;
 const GRID_EMPTY = [247, 245, 165];
+const GRID_DRAG = false;
 
 const RESOURCES = {
 	Population: '🚶',
@@ -57,10 +58,14 @@ function init() {
 	var house = new House();
 	GAME.grid.place(house, 0, 0);
 
-	var menu = new Menu('Shop', [
-		new BuyButton('Buy House', House),
+	let menu = new Menu('Shop', [
+		new BuyButton('Buy House', House)
 		//new Button('Buy Cure', Cure)
 		]);
+    defineHarvester('Money', function() {
+      return STATE.resources.Houses;
+    }, 60000);
+
 
   var population = new Population(); {
     if (population.house == 3) {
